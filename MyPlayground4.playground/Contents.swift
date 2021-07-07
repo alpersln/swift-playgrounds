@@ -50,7 +50,7 @@ struct PersonId {
     }
     
 //  2-after private keyword ,now only methods inside struct can read idNum
-    func identify () -> String {
+    func identify () -> String  {
         return "your id number : \(idNum)"
     }
     
