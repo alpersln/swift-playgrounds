@@ -43,8 +43,7 @@ FirstFactorial2(numb: 4)
 
 func FirstReverse(_ str: String) -> String {
  let str = String(str.reversed())
-  // code goes here
-  // Note: feel free to modify the return type of this function
+  
   return str
 
 }
