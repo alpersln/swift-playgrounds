@@ -191,3 +191,101 @@ func QuestionsMarks(_ str: String) -> Bool {
 QuestionsMarks("acc?7??sss?3rr1??????5")
 
 //MARK: ------Q7    ------
+
+//fibo
+// 1 2 3 5 8 13 21 34
+
+func fibo (n: Int) {
+    
+    var n1 = 1
+    var n2 = 0
+    
+    for _ in 0..<n {
+        let num = n1 + n2
+            n1 = n2
+            n2 = num
+    }
+    print(n2)
+}
+fibo(n:9)
+
+//MARK: ------Q8    ------
+
+
+//Find Intersection
+//
+//Have the function FindIntersection(strArr) read the array of strings stored in strArr which will contain 2 elements: the first element will represent a list of comma-separated numbers sorted in ascending order, the second element will represent a second list of comma-separated numbers (also sorted). Your goal is to return a comma-separated string containing the numbers that occur in elements of strArr in sorted order. If there is no intersection, return the string false.
+//Examples
+//
+//Input: ["1, 3, 4, 7, 13", "1, 2, 4, 13, 15"]
+//Output: 1,4,13
+//Input: ["1, 3, 9, 10, 17, 18", "1, 4, 9, 10"]
+//Output: 1,9,10
+
+func FindIntersection(_ strArr: [String]) -> String {
+    
+  let firstStr = strArr[0].split(separator:"," )
+  
+  let secondStr = strArr[1].split(separator:"," )
+  var ortaklar = ""
+ 
+
+  
+
+  for i in firstStr {
+    for j in secondStr {
+      if j == i {
+        ortaklar.append(String(j + ","))
+      }
+    }
+  }
+   let asd = ortaklar.removeLast()
+ 
+
+  return ortaklar.filter { $0 != Character(" ") }
+
+    
+}
+
+FindIntersection(["1, 3, 9, 10, 17, 18", "1, 4, 9, 10"])    //1,9,10
+
+
+
+
+
+//MARK: ------Q9    ------
+
+//
+//
+//Bracket Matcher
+//
+//Have the function BracketMatcher(str) take the str parameter being passed and return 1 if the brackets are correctly matched and each one is accounted for. Otherwise return 0. For example: if str is "(hello (world))", then the output should be 1, but if str is "((hello (world))" the the output should be 0 because the brackets do not correctly match up. Only "(" and ")" will be used as brackets. If str contains no brackets return 1.
+//Examples
+//
+//Input: "(coder)(byte))"
+//Output: 0
+//Input: "(c(oder)) b(yte)"
+//Output: 1
+
+func BracketMatcher(_ str: String) -> String {
+
+  var bracket = 0
+
+  for i in str {
+    if i == "(" {
+      bracket += 1
+    } else if i == ")" {
+      bracket -= 1
+    }
+    if bracket < 0 {
+      return "0"
+    }
+    
+  }
+  return bracket == 0 ? "1" : "0"
+
+}
+BracketMatcher("((deneme))((al)per)")       //1
+
+//MARK: ------Q10    ------
+
