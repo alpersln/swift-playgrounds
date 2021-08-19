@@ -24,7 +24,7 @@ if let username = getUsername() {
     print("no username")
 }
 
-//MARK:         ***********
+//MARK:         ************
 
 func greet(motoName: String?) {
     guard let r25 = motoName else {
