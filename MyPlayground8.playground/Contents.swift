@@ -1,5 +1,5 @@
 
-//MARK: ------Q1------
+//MARK: ------Q1--------
 
 //First Factorial
 //
