@@ -68,7 +68,7 @@ for _ in 1...3 {
     person.printGreeting()
 }
 
-//MARK:             *******
+//MARK:             ********
 
 class famous {
     var name = "Brad"
