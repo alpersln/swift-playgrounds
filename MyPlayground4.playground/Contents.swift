@@ -21,7 +21,7 @@ var newPerson = Person(name: "alper")
 //if we add lazy keyword to the familyTree property,swift will only create the FamilyTree struct when it's first accested:
 newPerson.familyTree
 
-//MARK:                     *****
+//MARK:                     ******
 
 struct Students{
 
